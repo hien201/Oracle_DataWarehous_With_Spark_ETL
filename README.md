@@ -99,17 +99,18 @@ Sau khi xác định được các bảng trong DW, tôi tiến hành xác đị
 ![image](https://github.com/hien201/Oracle_DataWarehous_With_Spark_ETL/assets/90466915/3c602212-e8b8-4e2b-85c2-766cde66aab3)
 
 #### Xác định và xây dựng các chương trình dựa trên kiến trúc công nghệ:
-    *  Step 1: Prepare: Load toàn bộ data vào postgres, bao gồm: I94-Immigration, temperature, city demo và các file txt mapping.
-    * Step 2: Extract and Load toàn bộ data từ postgres vào các Pyspark DataFrame: df_Immigration, df_citi_demo, df_temp, df_port, df_airport, df_contry, df_visa
-    * Step 3: Clean theo mục 4 và load data từ các df_Immigration, df_citi_demo, df_temp vào staging table DW
-    * Step 4: Clean theo mục 4 và load data từ các df: df_port, df_airport, df_contry, df_visa vào vùng mart luôn, không cần qua vùng staging. 
-    * Step 5: Transfer (sinh thêm bảng date từ bảng Immigration) và load data từ staging table sang mart table:
-            * Join bảng I94 Immigration với Temp thành bảng I94_visitor
-            * Insert data từ bảng I94 Immigration vào bảng date 
-    * Kiểm tra chất lượng dữ liệu:
-            * Kiểm tra bản ghi trùng lặp trong bảng I94_visitor
-            * Kiểm tra các vấn đề về dữ liệu đã được xử lý chưa
-    => Sau khi xác định được các bước rồi thì tiến hành xây dựng các chương trình tương ứng
+*  Step 1: Prepare: Load toàn bộ data vào postgres, bao gồm: I94-Immigration, temperature, city demo và các file txt mapping.
+* Step 2: Extract and Load toàn bộ data từ postgres vào các Pyspark DataFrame: df_Immigration, df_citi_demo, df_temp, df_port, df_airport, df_contry, df_visa
+* Step 3: Clean theo mục 4 và load data từ các df_Immigration, df_citi_demo, df_temp vào staging table DW
+* Step 4: Clean theo mục 4 và load data từ các df: df_port, df_airport, df_contry, df_visa vào vùng mart luôn, không cần qua vùng staging. 
+* Step 5: Transfer (sinh thêm bảng date từ bảng Immigration) và load data từ staging table sang mart table:
+    * Join bảng I94 Immigration với Temp thành bảng I94_visitor
+    * Insert data từ bảng I94 Immigration vào bảng date 
+* Kiểm tra chất lượng dữ liệu:
+    * Kiểm tra bản ghi trùng lặp trong bảng I94_visitor
+    * Kiểm tra các vấn đề về dữ liệu đã được xử lý chưa
+=> Sau khi xác định được các bước rồi thì tiến hành xây dựng các chương trình tương ứng
+
 ##### Thiết kế Batch:
 ETL sẽ được chạy theo Batch sau: 
 
