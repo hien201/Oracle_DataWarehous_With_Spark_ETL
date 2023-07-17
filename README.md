@@ -29,10 +29,10 @@ Tôi sẽ tập chung vào 2 phần chính:
     * Pandas: ETL dữ liệu kích thước nhỏ
 -----------------------------------
 ### 3. Thu thập và khai phá dữ liệu:
-##### Thu thập dữ liệu: (nguồn lấy dữ liệu) 
+#### Thu thập dữ liệu: (nguồn lấy dữ liệu) 
 * I94 Immigration: lấy ở đâu. 
 * Tempature Data: lấy ở đâu, dẫn link 
-##### Khai phá dữ liệu: mục đích là tìm hiểu xem các dữ liệu này cung cấp thông tin gì
+#### Khai phá dữ liệu: mục đích là tìm hiểu xem các dữ liệu này cung cấp thông tin gì
 ###### I94 Immigration: 
 * Cung cấp thông tin về nhập cư tại Hoa Kỳ như danh sách nhập cư, cảng nhập cảnh, ngày đến, ngày đi, địa điểm đến, loại visa….
 * Trong dự án này, tôi sử dụng dữ liệu tháng 4 năm 2016. Đây sẽ là bảng gốc của bảng TS_IMGT_F 
@@ -52,7 +52,7 @@ Tôi sẽ tập chung vào 2 phần chính:
 ------------------------------------
 ### 4. Xác định các bảng trong DW:
  Cần phải xác định được DW sẽ được tổ chức như thế nào? gồm những bảng nào?
-##### Trong dự án này, tôi xác định DW sẽ có:
+#### Trong dự án này, tôi xác định DW sẽ có:
 * 2 vùng: Staging và Mart
 * 2 loại bảng: Dim và Fact
 * Tổng cộng 14 bảng
@@ -88,7 +88,7 @@ Sau khi xác định được các bảng trong DW, tôi tiến hành xác đị
 - Có nhiều sân bay đóng cửa => xóa bản ghi
 - Chồng lấn dữ liệu trường iso_region => tách  state_code và country_code
   
- ##### Port (dim mapping txt):
+##### Port (dim mapping txt):
 - Tên port và tên state nằm cùng một trường => tách ra
 - Có nhiều port không xác định => chuyển về "other"
 - Chỉ lấy những port thuộc US => mapping với state table
