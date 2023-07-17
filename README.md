@@ -30,8 +30,9 @@ Tôi sẽ tập chung vào 2 phần chính:
 -----------------------------------
 ### 3. Thu thập và khai phá dữ liệu:
 #### Thu thập dữ liệu: (nguồn lấy dữ liệu) 
-* I94 Immigration: lấy ở đâu. 
-* Tempature Data: lấy ở đâu, dẫn link 
+* I94 Immigration: 
+* Tempature Data:
+* 
 #### Khai phá dữ liệu: mục đích là tìm hiểu xem các dữ liệu này cung cấp thông tin gì
 ###### I94 Immigration: 
 * Cung cấp thông tin về nhập cư tại Hoa Kỳ như danh sách nhập cư, cảng nhập cảnh, ngày đến, ngày đi, địa điểm đến, loại visa….
