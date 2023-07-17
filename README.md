@@ -1,4 +1,4 @@
-# Oracle_DataWarehous_With_Spark_ETL
+# Oracle_DataWarehouse_With_Spark_ETL
 ### 1. Giới thiệu dự án:
 copy …. 
 ### 2. Xác định yêu cầu và scop dự án:
