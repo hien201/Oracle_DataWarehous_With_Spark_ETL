@@ -95,7 +95,7 @@ Sau khi xác định được các bảng trong DW, tôi tiến hành xác đị
 
   ------------------------------------
 7. Xác định chương trình và phát triển chương trình:
-##### Thiết kế kiến trúc công nghệ:
+#### Thiết kế kiến trúc công nghệ:
 ![image](https://github.com/hien201/Oracle_DataWarehous_With_Spark_ETL/assets/90466915/3c602212-e8b8-4e2b-85c2-766cde66aab3)
 
 #### Xác định và xây dựng các chương trình dựa trên kiến trúc công nghệ:
@@ -111,7 +111,7 @@ Sau khi xác định được các bảng trong DW, tôi tiến hành xác đị
     * Kiểm tra các vấn đề về dữ liệu đã được xử lý chưa
 => Sau khi xác định được các bước rồi thì tiến hành xây dựng các chương trình tương ứng
 
-##### Thiết kế Batch:
+#### Thiết kế Batch:
 ETL sẽ được chạy theo Batch sau: 
 
 ![image](https://github.com/hien201/Oracle_DataWarehous_With_Spark_ETL/assets/90466915/51633ba1-9d47-4836-a707-4e563c3ac291)
