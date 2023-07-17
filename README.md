@@ -49,6 +49,15 @@ input here
 * 2 vùng: Staging và Mart
 * 2 loại bảng: Dim và Fact
 * Tổng cộng 14 bảng
+  
 ![image](https://github.com/hien201/Oracle_DataWarehous_With_Spark_ETL/assets/90466915/b02c3edb-9bdf-475e-a7e3-c8a2c0aa05d2)
+* Các bảng cần được xác định rõ thông tin, ví dụ:
+  ![image](https://github.com/hien201/Oracle_DataWarehous_With_Spark_ETL/assets/90466915/868b606d-5c3a-4b50-83fd-e6b8cfeb8ba7)
+-----------------------------------------
+### 5. Xây dựng Data Model:
+########### Sau khi xác định được các bảng trong DW, tôi tiến hành xác định quan hệ giữa các bảng
+=> Sau đó, xây dựng Mô hình quan hệ như sau: 
+![image](https://github.com/hien201/Oracle_DataWarehous_With_Spark_ETL/assets/90466915/8bdf96f9-d6ac-4491-854d-fa6012a3f61f)
+
 
 
