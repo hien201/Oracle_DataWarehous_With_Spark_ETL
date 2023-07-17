@@ -20,3 +20,4 @@ Oracle: Data Warehouse
 Spark (pyspark): ETL dữ liệu kích thước lớn, tại sao? 
 Pandas: ETL dữ liệu kích thước nhỏ, tại sao? 
 
+![image](https://github.com/hien201/Oracle_DataWarehous_With_Spark_ETL/assets/90466915/efe9e602-cd26-4343-8118-631f2483c1d1)
