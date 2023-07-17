@@ -10,16 +10,16 @@ input here
 #### Scop dự án:
 * Phân tích và thiết kế DW
 * Sau đó,  xây dựng một ETL pipeline để load dữ liệu vào DW (Oracle) từ 5 nguồn: 
-     * I94 Immigration data (lưu trữ ở DB postgres), 
-     * Temparture Data (lưu trữ ở local),
-     * U.S City Demographic Data (lưu trữ ở local),
-     * City Wether Data (lưu trữ ở local),
+     * I94 Immigration data (lưu trữ ở DB postgres)
+     * Temparture Data (lưu trữ ở local)
+     * U.S City Demographic Data (lưu trữ ở local)
+     * City Wether Data (lưu trữ ở local)
     * mapping txt file (lưu trữ ở local) 
 * Sử dụng công nghệ: 
       * Posgre: Database
     * Oracle: Data Warehouse
-    * Spark (pyspark): ETL dữ liệu kích thước lớn, tại sao? 
-    * Pandas: ETL dữ liệu kích thước nhỏ, tại sao?
+    * Spark (pyspark): ETL dữ liệu kích thước lớn
+    * Pandas: ETL dữ liệu kích thước nhỏ
 -----------------------------------
 ### 3. Thu thập và khai phá dữ liệu:
 ##### Thu thập dữ liệu: (nguồn lấy dữ liệu) 
@@ -33,17 +33,22 @@ input here
 * Cung cấp thông tin về nhiệt độ thế giới tại các thành phố từ năm 1974 đến năm 2018
 
 
-Airport Data: 
-cung cấp dữ liệu về các sân bay như mã sân bay, tên sân bay trong địa bàn hoa kỳ.
-U.S City Demographic Data: 
-Dữ liệu về nhân khẩu học tại các thành phố tại hoa kì có dân số lớn hơn hoặc bằng 65.000 người.
-Tôi muốn kiểm tra mối quan hệ giữa nhân khẩu học của các thành phố và lượng du khách/ người nhập cư đến đó.  
-Mapping file: chứa dữ liệu cho một số bảng dim: country, visa, port, state
-Đánh giá dữ liệu: Tôi phải xem xét về chất lượng và các vấn đề dữ liệu gặp phải. Từ đó xây dựng phương án xử lý các vấn đề này ( mô tả chi tiết tại mục 4)
-Xác định các bảng trong DW:
-Cần phải xác định được DW sẽ được tổ chức như thế nào? gồm những bảng nào?
-Trong dự án này, tôi xác định DW sẽ có:
-2 vùng: Staging và Mart
-2 kiểu bảng: Dim và Fact
-Tổng cộng 14 bảng
+###### Airport Data: 
+* Cung cấp dữ liệu về các sân bay như mã sân bay, tên sân bay trên thế giới.
+###### U.S City Demographic Data: 
+* Dữ liệu về nhân khẩu học tại các thành phố tại hoa kì có dân số lớn hơn hoặc bằng 65.000 người.
+* Tôi muốn kiểm tra mối quan hệ giữa nhân khẩu học của các thành phố và lượng du khách/ người nhập cư đến đó.  
+###### Mapping file:
+* chứa dữ liệu cho một số bảng dim: country, visa, port, state, mode 
+##### Đánh giá dữ liệu: 
+* Tôi phải xem xét về chất lượng và các vấn đề dữ liệu gặp phải. Từ đó xây dựng phương án xử lý các vấn đề này ( mô tả chi tiết tại mục 4)
+------------------------------------
+### 4. Xác định các bảng trong DW:
+####### Cần phải xác định được DW sẽ được tổ chức như thế nào? gồm những bảng nào?
+###### Trong dự án này, tôi xác định DW sẽ có:
+* 2 vùng: Staging và Mart
+* 2 loại bảng: Dim và Fact
+* Tổng cộng 14 bảng
+![image](https://github.com/hien201/Oracle_DataWarehous_With_Spark_ETL/assets/90466915/b02c3edb-9bdf-475e-a7e3-c8a2c0aa05d2)
+
 
