@@ -58,17 +58,17 @@ Tôi sẽ tập chung vào 2 phần chính:
 * 2 loại bảng: Dim và Fact
 * Tổng cộng 14 bảng
   
-![image](https://github.com/hien201/Oracle_DataWarehous_With_Spark_ETL/assets/90466915/b02c3edb-9bdf-475e-a7e3-c8a2c0aa05d2)
+![image](https://github.com/hien201/Oracle_DataWarehous_With_Spark_ETL/assets/90466915/499c3140-58ff-4f37-8b2a-1719e10dfb96)
 * Các bảng cần được xác định rõ thông tin, ví dụ:
   
-![image](https://github.com/hien201/Oracle_DataWarehous_With_Spark_ETL/assets/90466915/868b606d-5c3a-4b50-83fd-e6b8cfeb8ba7)
+![image](https://github.com/hien201/Oracle_DataWarehous_With_Spark_ETL/assets/90466915/f2efb28f-5f73-4575-92ee-7a3fd40ac5e2)
 
 -----------------------------------------
 ### 5. Xây dựng Data Model:
 Sau khi xác định được các bảng trong DW, tôi tiến hành xác định quan hệ giữa các bảng
 => Sau đó, xây dựng Mô hình quan hệ như sau: 
 
-![image](https://github.com/hien201/Oracle_DataWarehous_With_Spark_ETL/assets/90466915/a53b5c1d-02dc-405b-9c67-64e511a64ac7)
+![image](https://github.com/hien201/Oracle_DataWarehous_With_Spark_ETL/assets/90466915/9e130474-09d6-4190-be94-5708a1eac3ee)
 
 -----------------------------------------------
 ### 6. Các vấn đề dữ liệu và phương án xử lý:
@@ -99,7 +99,7 @@ Sau khi xác định được các bảng trong DW, tôi tiến hành xác đị
 7. Xác định chương trình và phát triển chương trình:
 #### Thiết kế kiến trúc công nghệ:
 
-![image](https://github.com/hien201/Oracle_DataWarehous_With_Spark_ETL/assets/90466915/3c602212-e8b8-4e2b-85c2-766cde66aab3)
+![image](https://github.com/hien201/Oracle_DataWarehous_With_Spark_ETL/assets/90466915/ca0270a0-0d24-4ac5-a227-86471adc2a83)
 
 #### Xác định và xây dựng các chương trình dựa trên kiến trúc công nghệ:
 *  Step 1: Prepare: Load toàn bộ data vào postgres, bao gồm: I94-Immigration, temperature, city demo và các file txt mapping.
@@ -121,7 +121,7 @@ ETL sẽ được chạy theo Batch sau:
 
 -------------------------------
 ### 8. Project Structure:
-![image](https://github.com/hien201/Oracle_DataWarehous_With_Spark_ETL/assets/90466915/ff9a613f-fe0e-408d-9d73-a3b089f80abf)
+![image](https://github.com/hien201/Oracle_DataWarehous_With_Spark_ETL/assets/90466915/477eb6f7-5b37-4a91-9121-9b9ae60bedcc)
 
 
 
