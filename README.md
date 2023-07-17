@@ -63,12 +63,14 @@ Tôi sẽ tập chung vào 2 phần chính:
 * Các bảng cần được xác định rõ thông tin, ví dụ:
   
 ![image](https://github.com/hien201/Oracle_DataWarehous_With_Spark_ETL/assets/90466915/868b606d-5c3a-4b50-83fd-e6b8cfeb8ba7)
+
 -----------------------------------------
 ### 5. Xây dựng Data Model:
 Sau khi xác định được các bảng trong DW, tôi tiến hành xác định quan hệ giữa các bảng
 => Sau đó, xây dựng Mô hình quan hệ như sau: 
 
 ![image](https://github.com/hien201/Oracle_DataWarehous_With_Spark_ETL/assets/90466915/a53b5c1d-02dc-405b-9c67-64e511a64ac7)
+
 -----------------------------------------------
 ### 6. Các vấn đề dữ liệu và phương án xử lý:
 #####  I94 Immigration:
