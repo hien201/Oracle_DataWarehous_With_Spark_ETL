@@ -59,7 +59,6 @@ Tôi sẽ tập chung vào 2 phần chính:
 * Tổng cộng 14 bảng
   
 ![image](https://github.com/hien201/Oracle_DataWarehous_With_Spark_ETL/assets/90466915/b02c3edb-9bdf-475e-a7e3-c8a2c0aa05d2)
-
 * Các bảng cần được xác định rõ thông tin, ví dụ:
   
 ![image](https://github.com/hien201/Oracle_DataWarehous_With_Spark_ETL/assets/90466915/868b606d-5c3a-4b50-83fd-e6b8cfeb8ba7)
