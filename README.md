@@ -118,7 +118,7 @@ Sau khi xác định được các bảng trong DW, tôi tiến hành xác đị
 #### Thiết kế Batch:
 ETL sẽ được chạy theo Batch sau: 
 
-![image](https://github.com/hien201/Oracle_DataWarehous_With_Spark_ETL/assets/90466915/9aa3e5a3-ea6a-4281-94bd-e7408f9c7a6a)
+![image](https://github.com/hien201/Oracle_DataWarehous_With_Spark_ETL/assets/90466915/643dcb19-58de-4328-9303-b066d18eca88)
 
 -------------------------------
 ### 8. Project Structure:
