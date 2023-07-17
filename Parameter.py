@@ -1,8 +1,8 @@
 
 # Postgres:
 dbname = "Immigration"
-user = "postgres"
-password = "postgres"
+user = "______"
+password = "______"
 server = "localhost"
 port = "5432"
 url = f"jdbc:postgresql://{server}:{port}/{dbname}"
@@ -12,8 +12,8 @@ driver = "org.postgresql.Driver"
 # Declare oracle variable:
 dbname_dw = "Immigration"
 table_dw_port = "TM_PORT_D"
-user_dw = "c##demo"
-password_dw = "oracle19c"
+user_dw = "______"
+password_dw = "______"
 server_dw = "127.0.0.1"
 port_dw = 1521
 service_name_dw = "ORCL"
