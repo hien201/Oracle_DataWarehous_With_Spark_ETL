@@ -60,7 +60,20 @@
 Sau khi xác định được các bảng trong DW, tôi tiến hành xác định quan hệ giữa các bảng
 => Sau đó, xây dựng Mô hình quan hệ như sau: 
 
-![image](https://github.com/hien201/Oracle_DataWarehous_With_Spark_ETL/assets/90466915/8bdf96f9-d6ac-4491-854d-fa6012a3f61f)
+![image](https://github.com/hien201/Oracle_DataWarehous_With_Spark_ETL/assets/90466915/a53b5c1d-02dc-405b-9c67-64e511a64ac7)
+
+### 6. Các vấn đề dữ liệu và phương án xử lý:
+#####  I94 Immigration:
+- Có nhiều column không cần thiết, đồng thời những column này cũng thường xuyên thiếu dữ liệu
+    ⇒ Xóa các column không cần thiết 
+- Nhiều bản ghi trùng lặp
+    ⇒ Check trùng và xóa đi.
+- Có nhiều I94port và addr không hợp lệ, thiếu \n
+    => Mapping với file txt và đưa các bản ghi sai lệch thành “O” viết tắt của “OTHER”
+- Trường dtadfile có giá trị < 20160101. Mà dữ liệu lấy trong năm 2016 do đó dtadfile không thể < 20160101 được. 
+    ⇒ xóa bản ghi có dtadfile < 20160101
+- To_char(YR, “YYYY”) khác “2016”
+    ⇒ xóa bản ghi. 
 
 
 
