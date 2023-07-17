@@ -99,6 +99,7 @@ Sau khi xác định được các bảng trong DW, tôi tiến hành xác đị
   ------------------------------------
 7. Xác định chương trình và phát triển chương trình:
 #### Thiết kế kiến trúc công nghệ:
+
 ![image](https://github.com/hien201/Oracle_DataWarehous_With_Spark_ETL/assets/90466915/3c602212-e8b8-4e2b-85c2-766cde66aab3)
 
 #### Xác định và xây dựng các chương trình dựa trên kiến trúc công nghệ:
