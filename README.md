@@ -8,12 +8,12 @@ input here
 - Đảm bảo khả năng hoạt động ổn định của ELT khi lượng dữ liệu nguồn tăng lên 
 #### Scop dự án:
 * Phân tích và thiết kế DW
-Sau đó,  xây dựng một ETL pipeline để load dữ liệu vào DW (Oracle) từ 5 nguồn: 
-I94 Immigration data (lưu trữ ở DB postgres), 
-Temparture Data (lưu trữ ở local),
- U.S City Demographic Data (lưu trữ ở local),
- City Wether Data (lưu trữ ở local),
- mapping txt file (lưu trữ ở local) 
+* Sau đó,  xây dựng một ETL pipeline để load dữ liệu vào DW (Oracle) từ 5 nguồn: 
+     * I94 Immigration data (lưu trữ ở DB postgres), 
+     * Temparture Data (lưu trữ ở local),
+     * U.S City Demographic Data (lưu trữ ở local),
+     * City Wether Data (lưu trữ ở local),
+    * mapping txt file (lưu trữ ở local) 
 Sử dụng công nghệ: 
 Posgre: Database
 Oracle: Data Warehouse
