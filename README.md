@@ -1,10 +1,10 @@
 # Oracle_DataWarehous_With_Spark_ETL
 ### 1. Giới thiệu dự án:
 copy …. 
-Xác định yêu cầu và scop dự án:
-Yêu cầu:
-đảm bảo tính toàn vẹn của dữ liêu
-chuẩn hóa và xử lý những vấn đề của dữ liệu nguồng
+### 2. Xác định yêu cầu và scop dự án:
+#### Yêu cầu:
+- Đảm bảo tính toàn vẹn của dữ liêu
+- Chuẩn hóa và xử lý những vấn đề của dữ liệu nguồng
 đảm bảo khả năng hoạt động ổn định của ELT khi lượng dữ liệu nguồn tăng lên 
 về mặt công nghệ: phải sử dụng pyspark 
 Scop dự án:
