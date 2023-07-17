@@ -1,5 +1,12 @@
 # Oracle_DataWarehouse_With_Spark_ETL
 ### 1. Giới thiệu dự án:
+Văn phòng Lữ hành và Du lịch Quốc gia (NTTO) quản lý chương trình khách đến ADIS/I-94 với sự hợp tác của Bộ An ninh Nội địa (DHS)/Hải quan và Bảo vệ Biên giới Hoa Kỳ (CBP). I-94 cung cấp số lượng khách du lịch đến Hoa Kỳ (với thời gian lưu trú từ 1 đêm trở lên và đến thăm theo một số loại thị thực nhất định) để tính toán xuất khẩu khối lượng du lịch và du lịch của Hoa Kỳ.
+
+Với vai trò là một kỹ sư dữ liệu, tôi muốn xây dựng mô hình dữ liệu I-94 để người dùng cuối có thể thực hiện phân tích thống kê như: Thành phố nào được truy cập nhiều nhất ở Hoa Kỳ? Trong bao nhiêu ngày? Vì lý do gì. Và nó phát triển như thế nào? Nó có liên quan đến các yếu tố khác như nhiệt độ hoặc dân số của thành phố không?
+
+Tôi sẽ tập chung vào 2 phần chính:
+- Phân tích yêu cầu và dữ liệu nguồn để thiết kế DW phù hợp.
+- Xây dựng đường ống dữ liệu ETL đảm bảo các yêu cầu về khai thác và bài toán về gia tăng khối lượng dữ liệu nguồn trong quá trình vận hành theo kịch bản.
 
 ----------------------------
 ### 2. Xác định yêu cầu và scop dự án:
@@ -61,7 +68,7 @@ Sau khi xác định được các bảng trong DW, tôi tiến hành xác đị
 => Sau đó, xây dựng Mô hình quan hệ như sau: 
 
 ![image](https://github.com/hien201/Oracle_DataWarehous_With_Spark_ETL/assets/90466915/a53b5c1d-02dc-405b-9c67-64e511a64ac7)
-
+-----------------------------------------------
 ### 6. Các vấn đề dữ liệu và phương án xử lý:
 #####  I94 Immigration:
 - Có nhiều column không cần thiết, đồng thời những column này cũng thường xuyên thiếu dữ liệu
@@ -73,7 +80,56 @@ Sau khi xác định được các bảng trong DW, tôi tiến hành xác đị
 - Trường dtadfile có giá trị < 20160101. Mà dữ liệu lấy trong năm 2016 do đó dtadfile không thể < 20160101 được. 
     ⇒ xóa bản ghi có dtadfile < 20160101
 - To_char(YR, “YYYY”) khác “2016”
-    ⇒ xóa bản ghi. 
+    ⇒ xóa bản ghi.
+- Định dạng thời gian trường arrdate ở dạng ssas => Cần đưa về định dạng Datetime.
+  
+##### Airport:
+- Thừa dữ liệu vì data này cung cấp dữ liệu về sân bay trên toàn thế giới => chỉ lấy dữ liệu sân bay ở US.
+- Có nhiều sân bay đóng cửa => xóa bản ghi
+- Chồng lấn dữ liệu trường iso_region => tách  state_code và country_code
+  
+ ##### Port (dim mapping txt):
+- Tên port và tên state nằm cùng một trường => tách ra
+- Có nhiều port không xác định => chuyển về "other"
+- Chỉ lấy những port thuộc US => mapping với state table
+
+  ------------------------------------
+7. Xác định chương trình và phát triển chương trình:
+##### Thiết kế kiến trúc công nghệ:
+![image](https://github.com/hien201/Oracle_DataWarehous_With_Spark_ETL/assets/90466915/3c602212-e8b8-4e2b-85c2-766cde66aab3)
+
+#### Xác định và xây dựng các chương trình dựa trên kiến trúc công nghệ:
+    *  Step 1: Prepare: Load toàn bộ data vào postgres, bao gồm: I94-Immigration, temperature, city demo và các file txt mapping.
+    * Step 2: Extract and Load toàn bộ data từ postgres vào các Pyspark DataFrame: df_Immigration, df_citi_demo, df_temp, df_port, df_airport, df_contry, df_visa
+    * Step 3: Clean theo mục 4 và load data từ các df_Immigration, df_citi_demo, df_temp vào staging table DW
+    * Step 4: Clean theo mục 4 và load data từ các df: df_port, df_airport, df_contry, df_visa vào vùng mart luôn, không cần qua vùng staging. 
+    * Step 5: Transfer (sinh thêm bảng date từ bảng Immigration) và load data từ staging table sang mart table:
+            * Join bảng I94 Immigration với Temp thành bảng I94_visitor
+            * Insert data từ bảng I94 Immigration vào bảng date 
+    * Kiểm tra chất lượng dữ liệu:
+            * Kiểm tra bản ghi trùng lặp trong bảng I94_visitor
+            * Kiểm tra các vấn đề về dữ liệu đã được xử lý chưa
+    => Sau khi xác định được các bước rồi thì tiến hành xây dựng các chương trình tương ứng
+##### Thiết kế Batch:
+ETL sẽ được chạy theo Batch sau: 
+
+![image](https://github.com/hien201/Oracle_DataWarehous_With_Spark_ETL/assets/90466915/51633ba1-9d47-4836-a707-4e563c3ac291)
+
+-------------------------------
+### 8. Project Structure:
+![image](https://github.com/hien201/Oracle_DataWarehous_With_Spark_ETL/assets/90466915/ff9a613f-fe0e-408d-9d73-a3b089f80abf)
+
+
+
+
+
+
+
+     
+
+     
+ 
+    
 
 
 
