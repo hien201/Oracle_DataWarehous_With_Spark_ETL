@@ -23,7 +23,7 @@ Tôi sẽ tập chung vào 2 phần chính:
      * City Wether Data (lưu trữ ở local)
     * mapping txt file (lưu trữ ở local) 
 * Sử dụng công nghệ: 
-      * Posgre: Database
+    * Posgre: Database
     * Oracle: Data Warehouse
     * Spark (pyspark): ETL dữ liệu kích thước lớn
     * Pandas: ETL dữ liệu kích thước nhỏ
